@@ -1,0 +1,111 @@
+:root {
+    /* states */
+    --finished-text: #018e0d;
+    --finished-background: #49ee8e;
+
+    --onGoing-text: rgb(248, 253, 110);
+    --onGoing-background: rgb(186, 174, 0);
+}
+
+.projects__container {
+    grid-row: 3;
+    font-size: var(--text-sm);
+}
+
+.projects__title {
+    text-align: center;
+}
+
+.projects__card__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 600px));
+    gap: 32px;
+    padding: 15px;
+    justify-content: center;
+}
+
+.projects__card {
+    box-shadow: var(--secondary-background) 0px 3px 8px;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.projects__card__header {
+    text-align: left;
+}
+
+.projects__card__title {
+    margin-bottom: 5px;
+}
+
+.projects__card__img img {
+    width: 100%;
+    max-height: 400px;
+}
+
+.projects__card__technologies {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-evenly;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.projects__card__links__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.projects__card__links__list>a {
+    box-shadow: var(--secondary-background) 0px 3px 8px;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.projects__card__technologies>li {
+    color: var(--light-200);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    gap: 20px;
+    border-radius: 15px;
+    font-size: var(--text-sm);
+}
+
+.projects__card__notes {
+    width: 100%;
+    height: 100px;
+}
+
+.projects__card__notes__list {
+    margin-top: 10px;
+    list-style-type: disc;
+    list-style-position: inside;
+    color: rgb(117, 117, 117);
+}
+
+.stateFinished {
+    background-color: var(--finished-background);
+    color: var(--finished-text);
+}
+
+.stateOnGoing {
+    background-color: var(--onGoing-background);
+    color: var(--onGoing-text);
+}

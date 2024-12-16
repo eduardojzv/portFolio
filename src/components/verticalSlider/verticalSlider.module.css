@@ -1,0 +1,87 @@
+/* Container for the entire slider */
+.sliderContainer {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-height: 350px;
+}
+
+/* Main image styles */
+.mainImageContainer {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.mainImage {
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+/* Thumbnail strip styles */
+.thumbnailStrip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 4rem;
+  /* Equivalent to 16 in Tailwind */
+}
+
+.thumbnailButton {
+  width: 100%;
+  height: 3rem;
+  /* Equivalent to 12 in Tailwind */
+  overflow: hidden;
+  border-radius: 0.25rem;
+  /* Equivalent to rounded in Tailwind */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnailButton:hover {
+  opacity: 1;
+}
+
+.thumbnailButtonActive {
+  border: 2px solid var(--primary-color);
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnailScroll {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 8rem;
+  /* Equivalent to 32 in Tailwind */
+  overflow-y: auto;
+}
+
+.navigationButton {
+  padding: 0.25rem;
+  /* Equivalent to p-1 in Tailwind */
+  border-radius: 0.25rem;
+  /* Equivalent to rounded in Tailwind */
+  background-color: rgba(0, 0, 0, 0.1);
+  /* Equivalent to bg-black/10 in Tailwind */
+  transition: background-color 0.3s ease;
+}
+
+.navigationButton:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Equivalent to bg-black/20 in Tailwind */
+}
+
+.navigationIcon {
+  width: 1rem;
+  /* Equivalent to w-4 in Tailwind */
+  height: 1rem;
+  /* Equivalent to h-4 in Tailwind */
+}
