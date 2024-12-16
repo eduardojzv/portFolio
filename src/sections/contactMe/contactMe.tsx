@@ -44,7 +44,7 @@ export default function ContactMe() {
               </li>
             ))}
           </ul>
-          <a href='CV2025.pdf' className={contact__cv} download>
+          <a href='CV2025V0.pdf' className={contact__cv} download>
             <IconDownload width={sizeIcons.with} height={sizeIcons.height} />
             {t('cv')}
           </a>
