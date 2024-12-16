@@ -8,7 +8,7 @@ const {
   projects__container, projects__card, projects__card__header, projects__card__img,
   projects__card__technologies, projects__card__container,
   projects__card__notes, projects__card__title, projects__title, stateFinished,
-  projects__card__notes__list, projects__card__links__list, stateOnGoing
+  projects__card__notes__list, projects__card__links__list, stateOnGoing,projects__card__links
 } = styles;
 
 //obtener el estado
@@ -55,7 +55,7 @@ const ProjectCard = ({ project,idx }: { project: Project,idx:string }) => {
       </div>
       <div className={projects__card__links__list}>
         {Object.entries(project.links).map(([key, { link, icon }]) => (
-          <a key={'projectLink-'+key} href={link} target="_blank" rel="noopener noreferrer" aria-label={`Enlace a ${key}`}>
+          <a className={projects__card__links} key={'projectLink-'+key} href={link} target="_blank" rel="noopener noreferrer" aria-label={`Enlace a ${key}`}>
             {icon}<span>{key === 'web' ? 'Página Web' : 'Repositorio'}</span>
           </a>
         ))}

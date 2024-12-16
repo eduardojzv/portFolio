@@ -64,7 +64,7 @@
     gap: 30px;
 }
 
-.projects__card__links__list>a {
+.projects__card__links {
     box-shadow: var(--secondary-background) 0px 3px 8px;
     border-radius: 10px;
     padding: 15px;
@@ -75,8 +75,12 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
+    transition: transform .2s ease-in-out, box-shadow .4s ease-out;
 }
-
+.projects__card__links:hover {
+    transform: scale(1.05);
+    box-shadow: var( --highlight-color) 0px 3px 8px;
+}
 .projects__card__technologies>li {
     color: var(--light-200);
     display: flex;

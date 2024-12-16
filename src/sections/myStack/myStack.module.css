@@ -1,0 +1,5 @@
+.stack__container{
+    background-color: red;
+    grid-row: 4;
+    width: 100%;
+}

@@ -1,6 +1,6 @@
 .app__main{
     display: grid;
-    grid-template-rows: 100px auto auto;
+    grid-template-rows: 100px auto auto auto;
     grid-template-columns:1fr;
     font-size: 1.5rem;
     height: 900px;
