@@ -6,6 +6,7 @@ const { stack__container, category__container, tech__item, tech__logo, tech__nam
 export default function MyStack() {
     return (
         <section className={stack__container}>
+            <h1>En proceso</h1>
             {Object.entries(techStack).map(([category, items]) => (
                 <div key={category} className={category__container}>
                     <h2>{category.toUpperCase()}</h2>
