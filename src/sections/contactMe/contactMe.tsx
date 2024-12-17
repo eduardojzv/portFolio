@@ -4,8 +4,8 @@ import styles from './contactMe.module.css'
 import { IconDownload } from '../../icons/others'
 const { contact__container, contact__details, contact__social, contact__name, contact__left, contact__right, contact__position, contact__description, contact__links, contact__cv } = styles
 const sizeIcons = {
-  with: "25px",
-  height: "25px"
+  with: "20px",
+  height: "20px"
 }
 const contactItems = {
   gmail: {
