@@ -108,10 +108,12 @@ body {
   }
 }
 
-/**/
-.staticImg {
-  position: absolute;
-  background: white;
+/*buttons sizes*/
+.buttonSizes {
+  height: 50px;
+  max-width: 190px;
+  padding: 20px;
+  border-radius: 30px;
 }
 
 .staticImg:hover {

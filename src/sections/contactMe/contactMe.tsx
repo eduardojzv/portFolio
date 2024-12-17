@@ -35,7 +35,7 @@ export default function ContactMe() {
           <p className={contact__description}>{t('description')}</p>
         </div>
         <div className={contact__links}>
-          <ul className={contact__social}>
+          <ul className={`${contact__social} buttonSizes`}>
             {Object.entries(contactItems).map(([key, val]) => (
               <li key={key}>
                 <a href={val.link} target='_blank'>
@@ -44,9 +44,9 @@ export default function ContactMe() {
               </li>
             ))}
           </ul>
-          <a href='CV2025V0.pdf' className={contact__cv} download>
+          <a href='CV2025V0.pdf' className={`${contact__cv} buttonSizes`} download>
             <IconDownload width={sizeIcons.with} height={sizeIcons.height} />
-            {t('cv')}
+            <span>{t('cv')}</span>
           </a>
         </div>
       </div>

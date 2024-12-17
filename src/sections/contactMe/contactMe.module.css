@@ -52,7 +52,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
     max-height: 200px;
     width: 100%;
@@ -65,9 +66,6 @@
     justify-content: center;
     gap: 30px;
     border: 2px solid var(--secondary-background);
-    border-radius: 30px;
-    height: 60px;
-    width: 190px;
 }
 
 .contact__social>li {
@@ -85,11 +83,8 @@
     align-items: center;
     gap: 20px;
     border: 2px solid var(--highlight-color);
-    height: 60px;
-    width: 200px;
     cursor: pointer;
-    border-radius: 30px;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, font-weight 0.2s ease-out;
 }
 
 .contact__cv:hover {
@@ -114,12 +109,7 @@
     .contact__right {
         grid-column: 1;
     }
-
-    /* .contact__right>img {
-        width: 250px;
-        height: 150px;
-    } */
-    .contact__links {
-        flex-direction: column;
+    .contact__description {
+        max-width: 100%;
     }
 }
