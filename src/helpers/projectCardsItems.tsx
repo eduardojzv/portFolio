@@ -50,7 +50,8 @@ export const projects: Projects = {
         title: "Hotel Fiesta",
         descrip: "Clon de la página web del Hotel Fiesta",
         images: [
-            { src: "projects/hotel.webp", notes: ["Página de inicio completada", "Diseño responsivo implementado"] },
+            { src: "projects/hotel.webp", notes: ["Página de inicio en completado", "Diseño responsivo implementado"] },
+            { src: "projects/rooms.webp", notes: ["En proceso", "Selección de habitaciones"] },
         ],
         state: false,
         technologies: [TAGS.REACTVITE, TAGS.CSS, TAGS.PYTHON, TAGS.FASTAPI],

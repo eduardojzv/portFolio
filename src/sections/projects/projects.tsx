@@ -7,16 +7,16 @@ import { Project } from '../../interfaces/projects';
 const {
   projects__container, projects__card, projects__card__header, projects__card__img,
   projects__card__technologies, projects__card__container,
-  projects__card__notes, projects__card__title, projects__title, stateFinished,
+  projects__card__notes, projects__card__title, projects__title, stateFinished,states,
   projects__card__notes__list, projects__card__links__list, stateOnGoing,projects__card__links
 } = styles;
 
 //obtener el estado
 function getState(state: boolean) {
   return state ?
-    <h3 className={stateFinished}>Terminado</h3>
+    <h3 className={`${stateFinished} ${states}`}>Terminado</h3>
     :
-    <h3 className={stateOnGoing}>En Proceso</h3>
+    <h3 className={`${stateOnGoing} ${states}`}>En Proceso</h3>
 }
 
 // Componente para una tarjeta de proyecto

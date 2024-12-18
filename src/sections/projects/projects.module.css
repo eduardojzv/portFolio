@@ -40,10 +40,14 @@
 .projects__card__title {
     margin-bottom: 5px;
 }
-
+.projects__card__img{
+    height: 350px;
+    width: 100%;
+}
 .projects__card__img img {
     width: 100%;
-    max-height: 400px;
+    height: 100%;
+    aspect-ratio: 16/9;
 }
 
 .projects__card__technologies {
@@ -104,9 +108,15 @@
     color: rgb(117, 117, 117);
 }
 
+.states{
+    padding: 5px;
+    border-radius: 10px;
+    width: fit-content;
+}
 .stateFinished {
     background-color: var(--finished-background);
     color: var(--finished-text);
+
 }
 
 .stateOnGoing {

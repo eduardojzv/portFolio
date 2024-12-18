@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IconDown } from '../../icons/others';
+import { IconLeftRow, IconRighRow } from '../../icons/others';
 import styles from './verticalSlider.module.css';
 
 interface VerticalImageSliderProps {
@@ -38,7 +38,7 @@ export function VerticalImageSlider({ images, alt, onImageChange }: VerticalImag
             className={styles.navigationButton}
             aria-label="Previous image"
           >
-            <IconDown className={styles.navigationIcon} />
+            <IconLeftRow className={styles.navigationIcon} />
           </button>
           
           <div className={styles.thumbnailScroll}>
@@ -65,7 +65,7 @@ export function VerticalImageSlider({ images, alt, onImageChange }: VerticalImag
             className={styles.navigationButton}
             aria-label="Next image"
           >
-            <IconDown className={styles.navigationIcon} />
+            <IconRighRow className={styles.navigationIcon} />
           </button>
         </div>
       )}
