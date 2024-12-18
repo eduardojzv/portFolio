@@ -3,7 +3,7 @@ import DropDownMenu from './dropDown';
 import { useEffect, useState } from 'react';
 import DropDownLanguage from './dropdownLanguage';
 import { menuItems } from '../../helpers/menuItems';
-import { MenuStructure } from '../../interfaces/menu';
+import { MenuDetails, MenuStructure } from '../../interfaces/menu';
 import { IconClose, IconMenu } from '../../icons/others';
 import ButtonTheme from '../buttonTheme/buttonTheme';
 import { useTranslation } from 'react-i18next';
@@ -49,7 +49,7 @@ export default function Menu() {
                                     {val.state &&
                                         <a onClick={() => handleMenu(false)} className={`${nav__item} ${nav__link}`} href={val.href}>
                                             {/* {val.icon} */}
-                                            <span key={key}>{t(`items.${key}`)}</span>
+                                            <span key={key}>{t(`items.${key as keyof MenuDetails['items']}`)}</span>
                                         </a>
 
                                     }
