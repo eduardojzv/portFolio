@@ -1,20 +1,34 @@
 import { useState } from 'react';
-import { VerticalImageSlider } from '../../components/verticalSlider/verticalSlider';
 import styles from './projects.module.css';
 import { projects } from '../../helpers/projectCardsItems';
-import { Project } from '../../interfaces/projects';
+import { Project, ProjectImage } from '../../interfaces/projects';
 import { useTranslation } from 'react-i18next';
 import { TFunction } from 'i18next';
-
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
 const {
   projects__container, projects__card, projects__card__header, projects__card__img,
   projects__card__technologies, projects__card__container,
   projects__card__notes, projects__card__title, projects__title, stateFinished, states,
   projects__card__notes__list, projects__card__links__list, stateOnGoing, projects__card__links
 } = styles;
+
+
 // Componente para una tarjeta de proyecto
 const ProjectCard = ({ project, idx, t }: { project: Project, idx: string, t: TFunction<"projects"> }) => {
   const [currentNotes, setCurrentNotes] = useState(project.images[0].notes);
+
+  function SliderOnClick(val:number) {
+    setCurrentNotes(project.images[val].notes)
+
+  }
+  const imgGallery = (images: ProjectImage[]) => {
+    const items = images.map((img) => ({
+      original: img.src,
+      thumbnail: img.src
+    }));
+    return <ImageGallery items={items} onSlide={SliderOnClick} showPlayButton={false}  showNav={false} />
+  }
   return (
     <li className={projects__card} key={'project-' + idx}>
       <div className={projects__card__header}>
@@ -22,11 +36,7 @@ const ProjectCard = ({ project, idx, t }: { project: Project, idx: string, t: TF
         <p>{project.descrip}</p>
       </div>
       <div className={projects__card__img}>
-        <VerticalImageSlider
-          images={project.images}
-          alt={project.title}
-          onImageChange={(index) => setCurrentNotes(project.images[index].notes)}
-        />
+        {imgGallery(project.images)}
       </div>
 
       {

@@ -11,7 +11,7 @@ interface Technology {
 }
 
 // Interfaz para imágenes de proyectos
-interface ProjectImage {
+export interface ProjectImage {
   src: string;
   notes: string[];
 }

@@ -48,7 +48,6 @@ export default function Menu() {
                                 <li key={key}>
                                     {val.state &&
                                         <a onClick={() => handleMenu(false)} className={`${nav__item} ${nav__link}`} href={val.href}>
-                                            {/* {val.icon} */}
                                             <span key={key}>{t(`items.${key as keyof MenuDetails['items']}`)}</span>
                                         </a>
 
