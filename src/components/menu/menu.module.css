@@ -36,15 +36,6 @@ button {
     transition: background-color 0.2s ease-out, transform 0.1s;
     color: var(--title-color)
 }
-
-/* .nav__menu:not(.header__top)::after {
-    z-index: -1;
-    position: absolute;
-    content: "";
-    inset: 0;
-    background-color: rgba(0,0, 0, .43);
-    filter: blur(10px);
-} */
 .header__top {
     color: var(--menu-text-color-invert);
     transform: unset;
