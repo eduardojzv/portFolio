@@ -11,7 +11,7 @@ i18next
 .use(LanguageDetector)
 .use(initReactI18next)
 .init({
-    debug: true,
+    debug: false,
     fallbackLng: 'es',
     defaultNS: defaultNS,
     fallbackNS: "fallback",
