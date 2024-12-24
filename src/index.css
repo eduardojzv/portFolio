@@ -46,7 +46,7 @@ html {
   --title-color-invert: light-dark(var(--light-100), var(--dark-200));
   --border-color: light-dark(var(--blue-200), var(--red-200));
   /*text sizes*/
-  --text-sm: clamp(0.8rem, 0.13vi + 0.77rem, 0.89rem);
+  --text-sm: clamp(1rem, 0.13vi + 0.77rem, 0.89rem);
   --text-base: clamp(1rem, 0.27vi + 0.93rem, 1.19rem);
   --text-md: clamp(1.25rem, 0.47vi + 1.43rem, 1.78rem);
   --text-lg: clamp(1.56rem, 0.78vi + 1.37rem, 2.11rem);

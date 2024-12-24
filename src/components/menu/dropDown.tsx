@@ -41,7 +41,7 @@ export default function DropDownMenu({ keys, values, idx,handleMenu}: Props) {
                     aria-expanded={state}
                     aria-label="browse"
                 >
-                    {keys}
+                    <span>{keys}</span>
                     <IconDown aria-hidden={state} className={`${chevron} ${state ? chevron__active : ""}`} />
                 </button>
                 <div id={`dropdown${idx}`} className={`${dropdown} ${state ? active : ""}`}>

@@ -32,27 +32,18 @@ button {
     width: 100%;
     position: fixed;
     z-index: 5;
-    transform: translate(25px, 50px);
-    transition: background-color 0.2s ease-out, transform 0.1s;
-    color: var(--title-color)
-}
-.header__top {
-    color: var(--menu-text-color-invert);
-    transform: unset;
-    border-bottom: var(--border);
+    transition: background-color 0.2s ease-out;
+    color: var(--title-color);
+    padding: 10px;
+    box-shadow: var(--highlight-color) 0px 3px 8px;
     background-color: var(--primary-background);
-
 }
-
 .container {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    max-width: 1600px;
-    margin: 0 auto;
     column-gap: 2rem;
-    height: 70px;
-    padding: 1.2rem 3rem;
+    max-height: 70px;
 }
 
 .menu,
@@ -76,11 +67,11 @@ button {
 
 .nav__item {
     text-wrap: pretty;
-    font-size: var(--text-sm);
     font-weight: 600;
     width: fit-content;
     text-align: center;
     position: relative;
+    font-size: var(--text-sm);
 }
 
 .nav__active {
@@ -168,7 +159,6 @@ button {
     flex-direction: column;
     gap: 0.5rem;
     padding: 1.2rem;
-    font-size: 0.95rem;
 }
 
 .dropdown__btn {
@@ -198,9 +188,7 @@ button {
 
 .menu__icons {
     display: none;
-    padding: 0.1rem;
-    margin-left: 1rem;
-    font-size: 1.9rem;
+    cursor: pointer;
 }
 
 .chevron {
@@ -218,11 +206,6 @@ button {
     .menu__icons {
         display: block;
     }
-
-    .nav__menu {
-        transform: unset;
-    }
-
     .container {
         padding: 1.2rem;
     }
@@ -296,9 +279,5 @@ button {
     .menu__bar>li:not(:last-child) {
         padding-bottom: 0.5rem;
         border-bottom: var(--border);
-    }
-
-    .menu__icons {
-        margin: 0 auto;
     }
 }
