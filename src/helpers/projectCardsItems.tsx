@@ -37,7 +37,7 @@ export const projects: Projects = {
         images: [
             { src: "projects/proSalud.webp", notes: ["Página de inicio completada", "Diseño responsivo implementado"] },
             { src: "projects/ourBrands.webp", notes: ["Lista de Marcas","Diseño responsivo implementado"] },
-            { src: "projects/jobs.webp", notes: ["Lista de empleos","Diseño responsivo implementado","Filtros por pais y provincia","todo con CSS puro"] }
+            { src: "projects/jobs.webp", notes: ["Diseño responsivo implementado","Filtros por pais y provincia","CSS puro","El servicio backend caduco, por lo tanto, no se mostrará la lista, pero así es como se veía anteriormente"] }
         ],
         state: true,
         technologies: [TAGS.REACTVITE, TAGS.CSS, TAGS.PYTHON, TAGS.FASTAPI],
@@ -51,9 +51,9 @@ export const projects: Projects = {
         descrip: "Clon de la página web del Hotel Fiesta",
         images: [
             { src: "projects/hotel.webp", notes: ["Página de inicio en completado", "Diseño responsivo implementado"] },
-            { src: "projects/rooms.webp", notes: ["En proceso", "Selección de habitaciones"] },
+            { src: "projects/rooms.webp", notes: ["Selección de habitaciones"] },
         ],
-        state: false,
+        state: true,
         technologies: [TAGS.REACTVITE, TAGS.CSS, TAGS.PYTHON, TAGS.FASTAPI],
         links: {
             web: { link: "https://hotelifiesta-clon.netlify.app/", icon: <IconChrome className="iconSizeCards" /> },

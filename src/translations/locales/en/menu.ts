@@ -1,8 +1,8 @@
 import { MenuStructure } from "../../../interfaces/menu";
 export const enMenu: MenuStructure = {
     items: {
-        home:"Home",
-        aboutMe:"About me",
+        contactMe:"Contact Me",
+        technologies:"Technologies",
         projects:"Projects"
     },
     dropdownItems: {

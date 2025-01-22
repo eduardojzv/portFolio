@@ -27,7 +27,7 @@ const contactItems = {
 export default function ContactMe() {
   const { t } = useTranslation("contact")
   return (
-    <section className={contact__container} id='start'>
+    <section className={contact__container} id='contactMe'>
       <div className={contact__left}>
         <div className={contact__details}>
           <h1 className={`typingAnimation ${contact__name}`}>{t('name')}</h1>

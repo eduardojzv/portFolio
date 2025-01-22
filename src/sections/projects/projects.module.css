@@ -100,7 +100,7 @@
 
 .projects__card__notes {
     width: 100%;
-    height: 100px;
+    height: 170px;
 }
 
 .projects__card__notes__list {
@@ -108,6 +108,10 @@
     list-style-type: disc;
     list-style-position: inside;
     color: rgb(117, 117, 117);
+}
+.projects__card__notes__list>li {
+    word-break: break-word;
+    line-height: 1.5;
 }
 
 .states{

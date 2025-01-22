@@ -1,16 +1,16 @@
 import { MenuDetails } from "../interfaces/menu";
 export const menuItems: MenuDetails = {
     items: {
-        home: {
-            href: "#start",
+        contactMe: {
+            href: "#contactMe",
             state: true
         },
         projects:{
             href:"#projects",
             state:true
         },
-        aboutMe:{
-            href:"#aboutMe",
+        technologies:{
+            href:"#technologies",
             state:true
         }
     },

@@ -1,6 +1,6 @@
 import styles from './menu.module.css'
 import DropDownMenu from './dropDown';
-import {useState } from 'react';
+import { useState } from 'react';
 import DropDownLanguage from './dropdownLanguage';
 import { menuItems } from '../../helpers/menuItems';
 import { MenuDetails, MenuStructure } from '../../interfaces/menu';

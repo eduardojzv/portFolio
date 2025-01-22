@@ -18,7 +18,7 @@ const {
 const ProjectCard = ({ project, idx, t }: { project: Project, idx: string, t: TFunction<"projects"> }) => {
   const [currentNotes, setCurrentNotes] = useState(project.images[0].notes);
 
-  function SliderOnClick(val:number) {
+  function SliderOnClick(val: number) {
     setCurrentNotes(project.images[val].notes)
 
   }
@@ -27,7 +27,7 @@ const ProjectCard = ({ project, idx, t }: { project: Project, idx: string, t: TF
       original: img.src,
       thumbnail: img.src
     }));
-    return <ImageGallery items={items} onSlide={SliderOnClick} showPlayButton={false}  showNav={false} />
+    return <ImageGallery items={items} onSlide={SliderOnClick} showPlayButton={false} showNav={false} />
   }
   return (
     <li className={projects__card} key={'project-' + idx}>
@@ -76,7 +76,7 @@ const ProjectCard = ({ project, idx, t }: { project: Project, idx: string, t: TF
 export default function Projects() {
   const { t } = useTranslation('projects')
   return (
-    <section id="projects" className={projects__container}>
+    <section className={projects__container} id="projects">
       <h1 className={projects__title}>{t('title')}</h1>
       <ul className={projects__card__container}>
         {Object.entries(projects).map(([id, project]) => (

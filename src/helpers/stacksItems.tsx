@@ -1,5 +1,5 @@
 import React from "react";
-import { IconBootsTrap, IconCss, IconFastApi, IconHTML, IconJs, IconMySql, IconNextJs, IconPostGreSql, IconPython, IconReact, IconSqlServer, IconTailwind } from "../icons/technologies";
+import { IconBootsTrap, IconCss, IconFastApi, IconHTML, IconJs, IconMySql, IconNextJs, IconPostGreSql, IconPython, IconReact, IconSqlServer, IconTailwind, IconTs } from "../icons/technologies";
 
 interface stackItems {
     [key: string]: {
@@ -14,13 +14,14 @@ export const techStack: stackItems = {
         { logo: <IconHTML />, item: "HTML" },
         { logo: <IconCss />, item: "CSS" },
         { logo: <IconJs />, item: "JavaScript" },
-        { logo: <IconNextJs />, item: "Next.js" },
+        { logo: <IconTs />, item: "TypeScript" },
         { logo: <IconTailwind />, item: "Tailwind CSS" },
         { logo: <IconBootsTrap />, item: "Bootstrap" },
     ],
     backend: [
         { logo: <IconPython />, item: "Python" },
         { logo: <IconFastApi />, item: "FastAPI" },
+        { logo: <IconNextJs />, item: "Next.js" },
     ],
     databases: [
         { logo: <IconMySql />, item: "MySQL" },

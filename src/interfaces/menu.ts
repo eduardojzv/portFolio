@@ -1,8 +1,8 @@
 export interface MenuStructure {
     items: {
-        home: string,
+        contactMe: string,
         projects: string,
-        aboutMe: string,
+        technologies: string,
     },
     dropdownItems: {
         dropDownMenu: {
