@@ -9,7 +9,7 @@ import { CSSProperties } from "react";
 interface Technology {
   name: string;
   logo: JSX.Element;
-  style: CSSProperties;
+  style?: CSSProperties;
 }
 
 // Interfaz para imágenes de proyectos

@@ -59,7 +59,20 @@
     flex-wrap: wrap;
     padding: 5px;
 }
-
+.projects__card__technologies_item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    gap: 20px;
+    border-radius: 15px;
+    font-size: var(--text-sm);
+    box-shadow: var(--secondary-background) 0px 3px 8px;
+    transition: transform .2s ease-in-out;
+}
+.projects__card__technologies_item:hover {
+    transform: scale(1.1);
+}
 .projects__card__links__list {
     display: flex;
     flex-direction: row;
@@ -86,16 +99,7 @@
     transform: scale(1.05);
     box-shadow: var( --highlight-color) 0px 3px 8px;
 }
-.projects__card__technologies>li {
-    color: var(--light-200);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 5px;
-    gap: 20px;
-    border-radius: 15px;
-    font-size: var(--text-sm);
-}
+
 
 .projects__card__notes {
     width: 100%;

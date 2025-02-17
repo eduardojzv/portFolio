@@ -10,7 +10,8 @@ const {
   projects__container, projects__card, projects__card__header, projects__card__img,
   projects__card__technologies, projects__card__container,
   projects__card__notes, projects__card__title, projects__title, stateFinished, states,
-  projects__card__notes__list, projects__card__links__list, stateOnGoing, projects__card__links
+  projects__card__notes__list, projects__card__links__list, stateOnGoing, projects__card__links,
+  projects__card__technologies_item
 } = styles;
 
 
@@ -47,7 +48,7 @@ const ProjectCard = ({ project, keyObject, t }: { project: Project, keyObject: s
 
       <ul className={projects__card__technologies}>
         {project.technologies.map((tech) => (
-          <li key={`tech-${tech.name}`} style={tech.style}>
+          <li key={`tech-${tech.name}`} className={projects__card__technologies_item} style={tech.style}>
             <span>{tech.name}</span> {tech.logo}
           </li>
         ))}
