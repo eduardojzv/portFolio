@@ -2,10 +2,14 @@ import { ProjecTranslation } from "../../../interfaces/projects";
 
 export const enProjects: ProjecTranslation = {
     title:'Projects',
-    descrip: 'Clone of the website of {{page}}',
+    descrip: {
+        ticoApp:"Own website, aimed at showing different categories of businesses and services",
+        hotelFiesta:"Hotel Fiesta website clone",
+        proSalud:"Alimentos Pro Salud website clone"
+    },
     states: {
         finished: "Finished",
-        onGoing: "On Going"
+        onGoing: "In progress"
     },
     notes: "Notes",
     links: {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './projects.module.css';
 import { projects } from '../../helpers/projectCardsItems';
-import { Project, ProjectImage } from '../../interfaces/projects';
+import { Project, ProjectImage, Projects } from '../../interfaces/projects';
 import { useTranslation } from 'react-i18next';
 import { TFunction } from 'i18next';
 import ImageGallery from "react-image-gallery";
@@ -15,9 +15,8 @@ const {
 
 
 // Componente para una tarjeta de proyecto
-const ProjectCard = ({ project, idx, t }: { project: Project, idx: string, t: TFunction<"projects"> }) => {
-  const [currentNotes, setCurrentNotes] = useState(project.images[0].notes);
-
+const ProjectCard = ({ project, keyObject, t }: { project: Project, keyObject: string, t: TFunction<"projects"> }) => {
+  const [currentNotes, setCurrentNotes] = useState(project.images[0].notes);  
   function SliderOnClick(val: number) {
     setCurrentNotes(project.images[val].notes)
 
@@ -25,15 +24,15 @@ const ProjectCard = ({ project, idx, t }: { project: Project, idx: string, t: TF
   const imgGallery = (images: ProjectImage[]) => {
     const items = images.map((img) => ({
       original: img.src,
-      thumbnail: img.src
+      thumbnail: img.src,
     }));
     return <ImageGallery items={items} onSlide={SliderOnClick} showPlayButton={false} showNav={false} />
   }
   return (
-    <li className={projects__card} key={'project-' + idx}>
+    <li className={projects__card} key={'project-' + keyObject}>
       <div className={projects__card__header}>
-        <h1 className={projects__card__title}>{t('descrip', { page: project.title })}</h1>
-        <p>{project.descrip}</p>
+        <h1 className={projects__card__title}>{ project.title}</h1>
+        <p>{t(`descrip.${keyObject as keyof Projects}`)}</p>
       </div>
       <div className={projects__card__img}>
         {imgGallery(project.images)}
@@ -62,7 +61,7 @@ const ProjectCard = ({ project, idx, t }: { project: Project, idx: string, t: TF
         </ul>
       </div>
       <div className={projects__card__links__list}>
-        {Object.entries(project.links).map(([key, { link, icon }]) => (
+        {project.links && Object.entries(project.links).map(([key, { link, icon }]) => (
           <a className={projects__card__links} key={'projectLink-' + key} href={link} target="_blank" rel="noopener noreferrer" aria-label={`Enlace a ${key}`}>
             {icon}<span>{key === 'web' ? t('links.web') : t('links.gitHub')}</span>
           </a>
@@ -73,14 +72,14 @@ const ProjectCard = ({ project, idx, t }: { project: Project, idx: string, t: TF
 };
 
 // Componente principal
-export default function Projects() {
+export default function ProjectsComponent() {
   const { t } = useTranslation('projects')
   return (
     <section className={projects__container} id="projects">
       <h1 className={projects__title}>{t('title')}</h1>
       <ul className={projects__card__container}>
-        {Object.entries(projects).map(([id, project]) => (
-          <ProjectCard key={id} project={project} idx={id} t={t} />
+        {Object.entries(projects).map(([key, project]) => (
+          <ProjectCard key={key} project={project} keyObject={key} t={t} />
         ))}
       </ul>
     </section>

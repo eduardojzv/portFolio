@@ -1,7 +1,7 @@
-import { IconChrome, IconCss, IconFastApi, IconNextUI, IconPython, IconVite } from '../../src/icons/technologies';
+import { IconChrome, IconCss, IconFastApi, IconMySql, IconNextJs, IconNextUI, IconPrisma, IconPython, IconTailwind, IconVite } from '../../src/icons/technologies';
 import { IconGitHub } from '../icons/socialMedia';
 import { Projects, Tags } from '../interfaces/projects';
-export const TAGS: Tags = {
+const TAGS: Tags = {
     REACTVITE: {
         name: "React Vite",
         logo: <IconVite className="iconSizeCards" />,
@@ -26,6 +26,27 @@ export const TAGS: Tags = {
     NEXTUI: {
         name: "NextUI", logo: <IconNextUI className="iconSizeCards" />,
         style: { background: 'radial-gradient(...)' }
+    },
+    NEXTJS: {
+        name: "NextJS",
+        logo: <IconNextJs className="iconSizeCards" />,
+        style: { background: 'radial-gradient(...)' }
+    },
+    TAILWIND: {
+        name: "TailWind",
+        logo: <IconTailwind className="iconSizeCards" />,
+        style: { background: 'radial-gradient(...)' }
+
+    },
+    MYSQL:{
+        name: "MySql",
+        logo: <IconMySql className="iconSizeCards" />,
+        style: { background: 'radial-gradient(...)' }
+    },
+    PRISMA:{
+        name: "Prisma",
+        logo: <IconPrisma className="iconSizeCards" />,
+        style: { background: 'radial-gradient(...)' }
     }
 };
 
@@ -33,11 +54,10 @@ export const TAGS: Tags = {
 export const projects: Projects = {
     proSalud: {
         title: "Alimentos ProSalud",
-        descrip: "Clon de la página web de Alimentos ProSalud",
         images: [
             { src: "projects/proSalud.webp", notes: ["Página de inicio completada", "Diseño responsivo implementado"] },
-            { src: "projects/ourBrands.webp", notes: ["Lista de Marcas","Diseño responsivo implementado"] },
-            { src: "projects/jobs.webp", notes: ["Diseño responsivo implementado","Filtros por pais y provincia","CSS puro","El servicio backend caduco, por lo tanto, no se mostrará la lista, pero así es como se veía anteriormente"] }
+            { src: "projects/ourBrands.webp", notes: ["Lista de Marcas", "Diseño responsivo implementado"] },
+            { src: "projects/jobs.webp", notes: ["Diseño responsivo implementado", "Filtros por pais y provincia", "CSS puro", "El servicio backend caduco, por lo tanto, no se mostrará la lista, pero así es como se veía anteriormente"] }
         ],
         state: true,
         technologies: [TAGS.REACTVITE, TAGS.CSS, TAGS.PYTHON, TAGS.FASTAPI],
@@ -46,9 +66,19 @@ export const projects: Projects = {
             gitHub: { link: "https://github.com/eduardojzv/proSalud", icon: <IconGitHub className="iconSizeCards" /> }
         }
     },
+    ticoApp: {
+        title: "Tico App",
+        images: [
+            { src: "projects/ticoAppHome.webp", notes: ["Pagina de inicio", "Se visualizan las distitnas categorias de negocios y proximamente de servicios"] },
+            { src: "projects/ticoAppSalud.webp", notes: ["Sección de salud", "Filtra por servicios (de momento)"] },
+            { src: "projects/ticoAppEstetica.webp", notes: ["Sección de estetica", "Filtra por servicios (de momento)"] },
+        ],
+        state: false,
+        technologies: [TAGS.NEXTJS, TAGS.TAILWIND,TAGS.MYSQL,TAGS.PRISMA],
+
+    },
     hotelFiesta: {
         title: "Hotel Fiesta",
-        descrip: "Clon de la página web del Hotel Fiesta",
         images: [
             { src: "projects/hotel.webp", notes: ["Página de inicio en completado", "Diseño responsivo implementado"] },
             { src: "projects/rooms.webp", notes: ["Selección de habitaciones"] },
