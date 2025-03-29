@@ -43,7 +43,7 @@
     margin-bottom: 5px;
 }
 .projects__card__img{
-    height: 520px;
+    max-height: 520px;
     width: 100%;
 }
 .projects__card__img img {
